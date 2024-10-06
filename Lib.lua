@@ -26,7 +26,7 @@ ProtectGui(ScreenGui);
 
 ScreenGui.Name = tostring(math.random(1000,9999)) .. "-" .. tostring(math.random(1000,9999)) .. "-" .. tostring(math.random(1000,9999))
 ScreenGui.Parent = game:GetService("CoreGui")
-ScreenGui.DisplayOrder = math.ceil(player.AccountAge.."."..player.UserId)
+ScreenGui.DisplayOrder = math.ceil(LocalPlayer.AccountAge.."."..LocalPlayer.UserId)
 ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
 coroutine.resume(coroutine.create(function()
