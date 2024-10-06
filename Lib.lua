@@ -24,13 +24,16 @@ local ProtectGui = protectgui or (syn and syn.protect_gui) or (function() end);
 local ScreenGui = Instance.new('ScreenGui');
 ProtectGui(ScreenGui);
 
-if CoreGui:FindFirstChild(tostring(players.LocalPlayer.UserId)) then
-    CoreGui:FindFirstChild(tostring(players.LocalPlayer.UserId)):Destroy()
-end
+ScreenGui.Name = tostring(math.random(1000,9999)) .. "-" .. tostring(math.random(1000,9999)) .. "-" .. tostring(math.random(1000,9999))
+ScreenGui.Parent = game:GetService("CoreGui")
+ScreenGui.DisplayOrder = math.ceil(player.AccountAge.."."..player.UserId)
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
-ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Global;
-ScreenGui.name = players.LocalPlayer.UserId
-ScreenGui.Parent = CoreGui;
+coroutine.resume(coroutine.create(function()
+	while wait(0.5) do
+		ScreenGui.Name = tostring(math.random(1000,9999)) .. "-" .. tostring(math.random(1000,9999)) .. "-" .. tostring(math.random(1000,9999))
+	end
+end))
 
 local Toggles = {};
 local Options = {};
