@@ -24,8 +24,8 @@ local ProtectGui = protectgui or (syn and syn.protect_gui) or (function() end);
 local ScreenGui = Instance.new('ScreenGui');
 ProtectGui(ScreenGui);
 
-if CoreGui:FindFirstChild(players.LocalPlayer.UserId) then
-    CoreGui:FindFirstChild(players.LocalPlayer.UserId):Destroy()
+if CoreGui:FindFirstChild(tostring(players.LocalPlayer.UserId)) then
+    CoreGui:FindFirstChild(tostring(players.LocalPlayer.UserId)):Destroy()
 end
 
 ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Global;
