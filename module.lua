@@ -11,6 +11,7 @@
 -- Services
 local MarketplaceService = game:GetService("MarketplaceService")
 local HttpService = game:GetService("HttpService")
+local CoreGui = game:GetService("CoreGui")
 
 -- Variables
 local module = {}
@@ -92,12 +93,12 @@ module.TruncateNumber = function(num: number, decimals: number)
 	return num * shift // 1 / shift
 end
 
-module.PlaySound = function(sound,vol)
+module.PlaySound = function(val,vol)
     local sound = Instance.new("Sound")
     sound.Name = "KH-"..tostring(math.random(1000,9999))
-    sound.Volume = vol
+    sound.Volume = tonumber(vol)
     sound.PlayOnRemove = true
-    sound.SoundId = sound
+    sound.SoundId = val
     sound.Parent = CoreGui
     sound:Destroy()
     return
