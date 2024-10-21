@@ -104,6 +104,11 @@ module.PlaySound = function(val,vol)
     return
 end
 
+module.announce = function(title,text,dur)
+    game:GetService("StarterGui"):SetCore("SendNotification", {Title = title;Text = text;Duration = dur; Button1 = "Continue";})
+    return
+end
+
 -- Main
 for name, func in module do
     if typeof(func) == "function" then
