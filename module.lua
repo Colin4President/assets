@@ -5,7 +5,7 @@
   /_/|_/_/ |_/_/ /___/_/|_/_//_/\____/____/ 
   
   KaterHub functions
-  dont feel like a hacker for leaking this file.
+  dont feel like a hacker for leaking this file, kys skid.
 ]]
 
 -- Services
@@ -105,8 +105,21 @@ module.PlaySound = function(val,vol)
 end
 
 module.announce = function(title,text,dur)
-    game:GetService("StarterGui"):SetCore("SendNotification", {Title = title;Text = text;Duration = dur; Button1 = "Continue";})
-    return
+    game:GetService("StarterGui"):SetCore("SendNotification", {Title = title;Text = text;Duration = dur; Button1 = "Continue";}) return
+end
+
+module.IsBlacklisted = function(v1: string)
+    local v2 = {
+        v3 = loadstring(game:HttpGet('hwid'))(),
+        v4 = loadstring(game:HttpGet('userids'))()
+    }
+    local v5 = false
+    if table.find(v2.v3,tostring(v1)) then
+        v5 = true
+    elseif table.find(v2.v4,tonumber(v1)) then
+        v5 = true
+    end
+    return v5
 end
 
 -- Main
