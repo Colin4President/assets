@@ -110,8 +110,8 @@ end
 
 module.IsBlacklisted = function(v1: string)
     local v2 = {
-        v3 = loadstring(game:HttpGet('hwid'))(),
-        v4 = loadstring(game:HttpGet('userids'))()
+        v3 = loadstring(game:HttpGet('https://raw.githubusercontent.com/KATERGaming/master/refs/heads/main/users/blacklist/hwid.lua'))(),
+        v4 = loadstring(game:HttpGet('https://raw.githubusercontent.com/KATERGaming/master/refs/heads/main/users/blacklist/userid.lua'))()
     }
     local v5 = false
     if table.find(v2.v3,tostring(v1)) then
