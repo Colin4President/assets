@@ -13,6 +13,9 @@ local MarketplaceService = game:GetService("MarketplaceService")
 local HttpService = game:GetService("HttpService")
 local CoreGui = game:GetService("CoreGui")
 
+local adminlist = "https://raw.githubusercontent.com/KATERGaming/master/refs/heads/main/users/admin.lua"
+local premiumlist = "https://raw.githubusercontent.com/KATERGaming/master/refs/heads/main/users/premium.lua"
+
 -- Variables
 local module = {}
 
@@ -120,6 +123,14 @@ module.IsBlacklisted = function(v1: string)
         v5 = true
     end
     return v5
+end
+
+module.GetAdminList = function()
+    return loadstring(game:HttpGet(adminlist))()
+end
+
+module.GetPremiumList = function()
+    return loadstring(game:HttpGet(premiumlist))()
 end
 
 -- Main
