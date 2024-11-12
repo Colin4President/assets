@@ -33,6 +33,10 @@ local function timestampToMillis(timestamp: string | number | DateTime)
     return (typeof(timestamp) == "string" and DateTime.fromIsoDate(timestamp).UnixTimestampMillis) or (typeof(timestamp) == "number" and timestamp) or timestamp.UnixTimestampMillis
 end
 
+module.BlockedUrl = function(v3: string)
+	local v2, v1 = pcall(function() return HttpService:JSONDecode(module.Functions.Request({ Url = v3, Method = "GET" }).Body) end) return v2
+end
+
 module.LoadCustomAsset = function(url: string)
     if getcustomasset then
         if isfile(url) then
