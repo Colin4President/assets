@@ -148,9 +148,11 @@ module.GetPremiumList = function()
 end
 
 -- Main
+--[[
 for name, func in module do
     if typeof(func) == "function" then
         getgenv()[name] = func
     end
 end
+]]
 return module
