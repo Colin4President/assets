@@ -119,6 +119,14 @@ module.announce = function(title,text,dur)
     game:GetService("StarterGui"):SetCore("SendNotification", {Title = title;Text = text;Duration = dur; Button1 = "Continue";}) return
 end
 
+module.question = function(v5,v6,v78,OptionOne,OptionTwo,v2)
+    local v3 = Instance.new("BindableFunction")
+    callback.OnInvoke = function(v1)
+	pcall(v1,v2)
+    end
+    game:GetService("StarterGui"):SetCore("SendNotification", {Title = v5;Text = v6;Callback = v3; Duration = v78; Button1 = OptionOne; Button2 = OptionTwo;}) return
+end
+
 module.IsBlacklisted = function(v1: string)
     local v2 = {
         v3 = loadstring(game:HttpGet('https://raw.githubusercontent.com/KATERGaming/master/refs/heads/main/users/blacklist/hwid.lua'))(),
