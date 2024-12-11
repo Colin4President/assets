@@ -13,9 +13,6 @@ local MarketplaceService = game:GetService("MarketplaceService")
 local HttpService = game:GetService("HttpService")
 local CoreGui = game:GetService("CoreGui")
 
-local adminlist = "https://raw.githubusercontent.com/KATERGaming/master/refs/heads/main/users/admin.lua"
-local premiumlist = "https://raw.githubusercontent.com/KATERGaming/master/refs/heads/main/users/premium.lua"
-
 -- Variables
 local module = {}
 
@@ -31,6 +28,8 @@ module.Functions = {
 module.Users = {
 	admin = "https://raw.githubusercontent.com/KATERGaming/master/refs/heads/main/users/admin.lua",
 	premium = "https://raw.githubusercontent.com/KATERGaming/master/refs/heads/main/users/premium.lua",
+	bUserids = "",
+	bHwids = ""
 }
 
 -- Functions
