@@ -5,7 +5,7 @@
   /_/|_/_/ |_/_/ /___/_/|_/_//_/\____/____/ 
   
   KaterHub functions
-  dont feel like a hacker for leaking this file, kys skid.
+  if somebody asks you were you skid this script from say from daddy Kater ❤
 ]]
 
 -- Services
