@@ -140,11 +140,11 @@ module.IsBlacklisted = function(v1: string)
 end
 
 module.GetAdminList = function()
-    return loadstring(game:HttpGet(adminlist))()
+    return loadstring(game:HttpGet(module.Users.admin))()
 end
 
 module.GetPremiumList = function()
-    return loadstring(game:HttpGet(premiumlist))()
+    return loadstring(game:HttpGet(module.Users.premium))()
 end
 
 -- Main
