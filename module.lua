@@ -28,6 +28,11 @@ module.Functions = {
 	GetAsset = getsynasset or getcustomasset
 }
 
+module.Users = {
+	admin = "https://raw.githubusercontent.com/KATERGaming/master/refs/heads/main/users/admin.lua",
+	premium = "https://raw.githubusercontent.com/KATERGaming/master/refs/heads/main/users/premium.lua",
+}
+
 -- Functions
 local function timestampToMillis(timestamp: string | number | DateTime)
     return (typeof(timestamp) == "string" and DateTime.fromIsoDate(timestamp).UnixTimestampMillis) or (typeof(timestamp) == "number" and timestamp) or timestamp.UnixTimestampMillis
