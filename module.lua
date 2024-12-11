@@ -28,8 +28,8 @@ module.Functions = {
 module.Users = {
 	admin = "https://raw.githubusercontent.com/KATERGaming/master/refs/heads/main/users/admin.lua",
 	premium = "https://raw.githubusercontent.com/KATERGaming/master/refs/heads/main/users/premium.lua",
-	bUserids = "",
-	bHwids = ""
+	bUserids = "https://raw.githubusercontent.com/KATERGaming/master/refs/heads/main/users/blacklist/userid.lua",
+	bHwids = "https://raw.githubusercontent.com/KATERGaming/master/refs/heads/main/users/blacklist/hwid.lua"
 }
 
 -- Functions
