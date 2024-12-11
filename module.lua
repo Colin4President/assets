@@ -121,9 +121,7 @@ end
 
 module.question = function(v5,v6,v78,OptionOne,OptionTwo,v2)
     local v3 = Instance.new("BindableFunction")
-    callback.OnInvoke = function(v1)
-	pcall(v1,v2)
-    end
+    v3.OnInvoke = function(v1) pcall(v1,v2) end
     game:GetService("StarterGui"):SetCore("SendNotification", {Title = v5;Text = v6;Callback = v3; Duration = v78; Button1 = OptionOne; Button2 = OptionTwo;}) return
 end
 
