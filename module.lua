@@ -147,6 +147,20 @@ module.GetPremiumList = function()
     return loadstring(game:HttpGet(module.Users.premium))()
 end
 
+module.GetPlayerPos = function()
+    local player = game:GetService("Players").LocalPlayer
+    if player.Character then if player.Character.HumanoidRootPart then return player.Character.HumanoidRootPart.Position end
+        print(player.Character.HumanoidRootPart.Position)
+    end
+end
+
+module.SaveString = function(v1: string,v2)
+    getgenv()[v1] = v2
+end
+module.Load = function(v1)
+    return getgenv()[v1]
+end
+
 -- Main
 --[[
 for name, func in module do
