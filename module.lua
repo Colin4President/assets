@@ -26,10 +26,19 @@ module.Functions = {
 }
 
 module.Users = {
-	admin = "https://raw.githubusercontent.com/KATERGaming/master/refs/heads/main/users/admin.lua",
-	premium = "https://raw.githubusercontent.com/KATERGaming/master/refs/heads/main/users/premium.lua",
-	bUserids = "https://raw.githubusercontent.com/KATERGaming/master/refs/heads/main/users/blacklist/userid.lua",
-	bHwids = "https://raw.githubusercontent.com/KATERGaming/master/refs/heads/main/users/blacklist/hwid.lua"
+    admin = "https://raw.githubusercontent.com/KATERGaming/master/refs/heads/main/users/admin.lua",
+    premium = "https://raw.githubusercontent.com/KATERGaming/master/refs/heads/main/users/premium.lua",
+    bUserids = "https://raw.githubusercontent.com/KATERGaming/master/refs/heads/main/users/blacklist/userid.lua",
+    bHwids = "https://raw.githubusercontent.com/KATERGaming/master/refs/heads/main/users/blacklist/hwid.lua"
+}
+
+module.Theme = {
+    hovercolor = Color3.fromRGB(255, 34, 38),
+    Primary = Color3.fromRGB(138, 146, 255),
+    Background = Color3.fromRGB(138, 146, 255),
+    ["icons"] = {
+        closeicon = ""
+    }
 }
 
 -- Functions
@@ -165,6 +174,10 @@ module.QueueOnTeleport = function(v1:string)
     if QueueOnTeleport then game:GetService("Players").LocalPlayer.OnTeleport:Connect(function() QueueOnTeleport(v1) end)
         return true else return 
     false end
+end
+
+module.GetTheme = function()
+    return module.Theme
 end
 
 -- Main
