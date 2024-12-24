@@ -41,6 +41,15 @@ module.Theme = {
     }
 }
 
+module.KaterhubData = {
+    invite = "kSBmA2qKEp",
+    creator = "@w2pr",
+    version = "V3",
+    ["other"] = {
+        description = "We introduce players to the other side of Roblox."
+    }
+}
+
 -- Functions
 local function timestampToMillis(timestamp: string | number | DateTime)
     return (typeof(timestamp) == "string" and DateTime.fromIsoDate(timestamp).UnixTimestampMillis) or (typeof(timestamp) == "number" and timestamp) or timestamp.UnixTimestampMillis
@@ -181,12 +190,7 @@ module.GetTheme = function()
 end
 
 module.GetKaterhubData = function()
-    local v2, v1 = pcall(function()
-        return http:JSONDecode(module.Functions.Request({ Url = "https://katerhub-inc.github.io/KaterHub/assets/data.json", Method = "GET" }).Body)
-    end)
-    if v2 ~= false then
-        return v1
-    end
+    return module.KaterhubData
 end
 
 -- Main
