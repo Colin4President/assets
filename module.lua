@@ -76,7 +76,7 @@ module.LoadCustomAsset = function(url: string)
     if url:find("rbxassetid") or tonumber(url) then
         return "rbxassetid://"..url:match("%d+")
     end
-    error(debug.traceback("Failed to load custom asset for:\n"..url))
+    warn(debug.traceback("Failed to load custom asset for:\n"..url))
 end
 
 module.LoadCustomInstance = function(url: string)
