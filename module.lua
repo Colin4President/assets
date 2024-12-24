@@ -184,7 +184,9 @@ module.GetKaterhubData = function()
     local v2, v1 = pcall(function()
         return http:JSONDecode(module.Functions.Request({ Url = "https://katerhub-inc.github.io/KaterHub/assets/data.json", Method = "GET" }).Body)
     end)
-    return v2, v1
+    if v2 ~= false then
+        return v1
+    end
 end
 
 -- Main
