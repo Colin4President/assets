@@ -37,7 +37,7 @@ module.Theme = {
     Primary = Color3.fromRGB(138, 146, 255),
     Background = Color3.fromRGB(138, 146, 255),
     ["icons"] = {
-        closeicon = "https://github.com/Colin4President/assets/blob/main/BillboardImage.png?raw=true"
+        closeicon = "https://github.com/Colin4President/assets/blob/main/mini.png?raw=true"
     }
 }
 
