@@ -33,11 +33,11 @@ module.Users = {
 }
 
 module.Theme = {
-    hovercolor = Color3.fromRGB(255, 34, 38),
+    hovercolor = Color3.fromRGB(116, 82, 255), -- 255, 34, 38
     Primary = Color3.fromRGB(138, 146, 255),
     Background = Color3.fromRGB(138, 146, 255),
     ["icons"] = {
-        closeicon = "https://github.com/Colin4President/assets/blob/main/mini.png?raw=true"
+        closeicon = "https://github.com/Colin4President/assets/blob/main/X.png?raw=true"
     }
 }
 
