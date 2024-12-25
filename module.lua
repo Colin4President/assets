@@ -47,6 +47,10 @@ module.KaterhubData = {
     version = "V3",
     ["other"] = {
         description = "We introduce players to the other side of Roblox."
+    },
+    ["versions"] = {
+        "V3",
+	"V1"
     }
 }
 
