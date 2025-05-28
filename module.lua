@@ -33,9 +33,9 @@ module.Users = {
 }
 
 module.Theme = {
-    hovercolor = Color3.fromRGB(116, 82, 255), -- 255, 34, 38
-    Primary = Color3.fromRGB(138, 146, 255),
-    Background = Color3.fromRGB(138, 146, 255),
+    hovercolor = Color3.fromRGB(255, 34, 38), -- 255, 34, 38
+    Primary = Color3.fromRGB(186, 19, 22),
+    Background = Color3.fromRGB(186, 19, 22),
     ["icons"] = {
         closeicon = "https://github.com/Colin4President/assets/blob/main/X.png?raw=true"
     }
@@ -46,7 +46,7 @@ module.KaterhubData = {
     creator = "@w2pr",
     version = "V3",
     ["other"] = {
-        description = "We introduce players to the other side of Roblox."
+        description = "This is the last version of katerhub!"
     },
     ["versions"] = {
         "V3",
