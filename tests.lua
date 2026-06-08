@@ -1,3 +1,3 @@
-local fsy = 1
+local fsy = "asdads"
 
 return fsy
